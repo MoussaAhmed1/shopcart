@@ -1,0 +1,48 @@
+footer .container{
+  border-top: #000 solid 1px   ;
+  border-bottom: #000 solid 1px   ;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
+  gap: 15px;
+}
+
+footer .container div {
+  margin: 0.1em;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+footer .container div:first-child {
+  grid-column: span 2;
+}
+
+footer .container .footer_acepted_payment img:not(:first-child) {
+  padding: 5px;
+  border: 1px solid #4444443b;
+}
+footer .container h3 {
+  font-weight: bold;
+}
+footer .container .footer_acepted_payment p {
+  margin: 32px 0;
+
+}
+
+footer .container ul li {
+  transition: all 200ms ease;
+  color: #000;
+  font-size: 14px;
+  line-height: 200%;
+  font-weight: 400;
+  font-weight: 500;
+  
+}
+
+footer .container ul li:hover {
+  color: var(--aColor_hover);
+  transform: translateX(5px);
+  cursor: pointer;
+}

@@ -1,0 +1,116 @@
+.products{
+    position: relative;
+}
+
+.products .products-content{
+   display: grid;
+   gap: 10px;
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+   justify-content: center;
+   align-items: flex-end;
+   align-content: end;
+
+}   
+
+.products .img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-bg-color);
+    overflow: hidden;
+    transition: ease-in-out 1s;
+    
+}
+.products .img-wrapper img{
+    max-width: 100%;
+    transition: ease-in-out var(--main-transition-duration);
+}
+.products .img-wrapper:hover img{
+
+    transform: scale(1.4);
+
+}
+
+.products .products-content .name_price{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
+
+
+.products button{
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 16px;
+    background: none;
+    width: 125px;
+    transition: var(--main-transition-duration);
+    border: #817f7f .5px solid;
+}
+ button.Remove{
+    background-color: darkred;
+}
+ button.Add{
+    background-color: none;
+}
+
+.products button:hover{
+   color: #fff;
+    background: #0e744b;
+}
+.products button:last-child{
+    border: none;
+    color: #fff;
+    background: #0e744b;
+}
+.products button:last-child:hover{
+    color: #000;
+    border: #817f7f .5px solid;
+    background: none;
+}
+
+/* model quick-view */
+
+.products .quick-view{
+    position: fixed;
+    z-index: 6;
+    top: 15%;
+    left: 20%;
+    min-width: 250px;
+    max-width: 600px;
+    min-height: 500px;
+    background-color: blanchedalmond;
+    overflow: hidden;
+    padding: 5px;
+    visibility: hidden;
+    
+    /* transform: translate(50%,50%); */
+}
+.products .quick-view .quick-view-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    justify-content: start;
+   align-content: start;
+   gap: 15px;
+}
+.products .quick-view .quick-view-content .img-wrapper{
+    width: 300px;
+    transition: none;
+    
+}
+.products .quick-view .quick-view-content .img-wrapper img{
+    max-width: 100%;
+    transition: none;
+    
+}
+.products .quick-view .close{
+    width: 26px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    cursor: pointer;
+}

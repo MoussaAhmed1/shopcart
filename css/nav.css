@@ -1,0 +1,151 @@
+nav {
+    position: relative;
+    color: black;
+    font-weight: 700;
+    
+}
+nav .nav-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+nav .hamborger-menu{
+    display: none;
+    
+}
+nav .hamborger-menu img{
+    width: 30px;
+}
+
+nav .user , nav .nav-links ul, nav .userbox{
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+nav .nav-links ul li , nav .userbox{
+    padding: 0 15px;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+
+}
+nav .userbox span{
+    margin-left: 4px;
+}
+
+nav .userbox.shop-icon #numberOfProducts{
+    position: absolute;
+    background-color: var(--main-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    left: 29%;
+    z-index: 5;
+    font-size: .8em;
+    color: #3e3d3d;
+}
+
+@media (max-width:900px) {
+
+   nav .nav-links{
+        position: absolute;
+        background: var(--main-bg-color);
+        top: 100%;
+        z-index: 3;
+        right: 0%;
+        width: 100%;
+        display: none;
+        
+    }
+    nav .nav-links ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav .hamborger-menu{
+        display: block;
+    }
+
+
+
+}
+
+ nav ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -114%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: 0.3s;
+  }
+   nav ul li:hover::before {
+    left: 0%;
+  }
+  nav .nav-content .shopping-cart {
+    background-color: #fff;
+    position: absolute;
+    top: 105%;
+    right: 20%;
+    display: block;
+    max-width: 40%;
+    min-width: 30%;
+    z-index: 5;
+    padding: 20px;
+    display:none;
+    transition: var(--main-transition-duration);
+    
+  }
+
+  nav .nav-content .shopping-cart .shopping-cart-content{
+    
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    flex-direction: column;
+    max-height: 404px;
+    overflow:auto;
+
+  }
+  nav .nav-content .shopping-cart img{
+    max-width: 100px;
+    
+  }
+
+  nav .nav-content .shopping-cart .shopping-cart-content span{
+    margin-left: 25px;
+  }
+  nav .shopping-cart button{
+    margin-top: 15px;
+    margin-left: 5px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 16px;
+    background: none;
+    width: 100px;
+    transition: var(--main-transition-duration);
+    border: #817f7f .5px solid;
+}
+.shopping-cart button:hover{
+   color: #fff;
+    background: #0e744b;
+}
+
+.shopping-cart button:last-child{
+    border: none;
+    color: #fff;
+    background: rgb(210, 29, 29);
+}

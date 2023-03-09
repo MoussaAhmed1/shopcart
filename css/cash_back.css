@@ -1,0 +1,69 @@
+.cash-back{
+    display: flex;
+    padding: 60px;
+    background-color: blanchedalmond;
+    max-height: 350px ;
+    justify-content: center;
+    align-items: center;
+    padding-left: 70px;
+}
+
+.cash-back .cash-back-box {
+    max-width: 50%;
+    min-width: 350px;
+    margin: 6%;
+}
+.cash-back .cash-back-box h1{
+    margin-bottom: 18px;
+    font-size: 52px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    
+}
+.cash-back .cash-back-box button{
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 16px;
+    background: #1b6f35;
+    width: 125px;
+    transition: var(--main-transition-duration);
+    border: none;
+}
+.cash-back .cash-back-box button:hover{
+   
+    background: #231F1E;
+}
+
+.cash-back .cash-back-box:last-child{
+    position: relative;
+}
+.cash-back .cash-back-box:last-child .card{
+    top: -70px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(-30deg);
+}
+.cash-back .cash-back-box:last-child .card:nth-child(2){
+    transform: translate(15px,15px);
+    z-index: 1;
+    transform: rotate(-20deg);
+}
+.cash-back .cash-back-box:last-child .card:nth-child(3){
+    transform: translate(30px,30px);
+    z-index: 0;
+    transform: rotate(-15deg);
+}
+
+@media(max-width:810px)
+{
+    .cash-back .cash-back-box:last-child{
+       display: none;
+    }
+    .cash-back .cash-back-box {
+        max-width: 100%;
+    }
+}
