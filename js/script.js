@@ -206,6 +206,8 @@ const countShoppingCart = ()=>{
 
 //quick view Model
 const Model = document.querySelector(".quick-view");
+const overlay = document.querySelector(".overlay");
+
 const quickView = (id)=>{
   let product = productList.find((product) => product.id == id);
   Model.innerHTML =` 
@@ -226,6 +228,7 @@ const quickView = (id)=>{
           </div>
           `
 Model.style.visibility = "visible";
+overlay.style.visibility = "visible";
 
 }
 
@@ -234,6 +237,7 @@ Model.style.visibility = "visible";
 
 const closeModel = ()=>{
   Model.style.visibility = "hidden";
+  overlay.style.visibility = "hidden";
 }
 
 
